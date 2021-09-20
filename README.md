@@ -10,3 +10,4 @@ dioda 01 swobodny przeplyw
 dioda 10 kontrolowany przepływ
 dioda 11 opróżnianie
 dioda 100 stan krytyczny
+.
