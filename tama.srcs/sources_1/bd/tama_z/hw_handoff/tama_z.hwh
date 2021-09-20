@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun 23 04:26:24 2020" VIVADOVERSION="2017.4">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="tama_z" PACKAGE="clg400" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="pelny_0" SIGIS="undef" SIGNAME="External_Ports_pelny_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="czujniki_0" PORT="pelny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="polowa_0" SIGIS="undef" SIGNAME="External_Ports_polowa_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="czujniki_0" PORT="polowa"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="stan_krytyczny_0" SIGIS="undef" SIGNAME="External_Ports_stan_krytyczny_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="czujniki_0" PORT="stan_krytyczny"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="pamiec_pro_0" PORT="clk"/>
+        <CONNECTION INSTANCE="PBlazeZH_0" PORT="CLK"/>
+        <CONNECTION INSTANCE="multiplexer_0" PORT="clk"/>
+        <CONNECTION INSTANCE="dekoder_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="tryby_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tryby_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="multiplexer_0" PORT="tryby"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="ilosc_otworow_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ilosc_otworow_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="multiplexer_0" PORT="ilosc_otworow"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="doplyw_0" SIGIS="undef" SIGNAME="dekoder_0_doplyw">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dekoder_0" PORT="doplyw"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="kontrolka_0" RIGHT="0" SIGIS="undef" SIGNAME="dekoder_0_kontrolka">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dekoder_0" PORT="kontrolka"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="otwor1_0" SIGIS="undef" SIGNAME="otwory_0_otwor1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="otwory_0" PORT="otwor1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="otwor2_0" SIGIS="undef" SIGNAME="otwory_0_otwor2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="otwory_0" PORT="otwor2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="otwor3_0" SIGIS="undef" SIGNAME="otwory_0_otwor3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="otwory_0" PORT="otwor3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="otwory_0" PORT="reset"/>
+        <CONNECTION INSTANCE="dekoder_0" PORT="reset"/>
+        <CONNECTION INSTANCE="PBlazeZH_0" PORT="RESET"/>
+        <CONNECTION INSTANCE="multiplexer_0" PORT="reset"/>
+        <CONNECTION INSTANCE="czujniki_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/PBlazeZH_0" HWVERSION="1.0" INSTANCE="PBlazeZH_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PBlazeZH" VLNV="xilinx.com:user:PBlazeZH:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_PBlazeZH_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="IN_PORT" RIGHT="0" SIGIS="undef" SIGNAME="multiplexer_0_dane">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="multiplexer_0" PORT="dane"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="INTERRUPT" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="I" NAME="RESET" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="17" NAME="INSTRUCTION" RIGHT="0" SIGIS="undef" SIGNAME="pamiec_pro_0_instruction">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pamiec_pro_0" PORT="instruction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="OUT_PORT" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_OUT_PORT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dekoder_0" PORT="dane"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="PORT_ID" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_PORT_ID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dekoder_0" PORT="porty"/>
+            <CONNECTION INSTANCE="multiplexer_0" PORT="porty"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="READ_STROBE" SIGIS="undef"/>
+        <PORT DIR="O" NAME="WRITE_STROBE" SIGIS="undef" SIGNAME="PBlazeZH_0_WRITE_STROBE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dekoder_0" PORT="write_strobe"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="INTERRUPT_ACK" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="9" NAME="ADDRESS" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_ADDRESS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pamiec_pro_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/czujniki_0" HWVERSION="1.0" INSTANCE="czujniki_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="czujniki" VLNV="xilinx.com:user:czujniki:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_czujniki_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="pelny" SIGIS="undef" SIGNAME="External_Ports_pelny_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pelny_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="polowa" SIGIS="undef" SIGNAME="External_Ports_polowa_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="polowa_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="stan_krytyczny" SIGIS="undef" SIGNAME="External_Ports_stan_krytyczny_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="stan_krytyczny_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="czujniki" RIGHT="0" SIGIS="undef" SIGNAME="czujniki_0_czujniki">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="multiplexer_0" PORT="czujnik"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/dekoder_0" HWVERSION="1.0" INSTANCE="dekoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dekoder" VLNV="xilinx.com:user:dekoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_dekoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="write_strobe" SIGIS="undef" SIGNAME="PBlazeZH_0_WRITE_STROBE">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="WRITE_STROBE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="porty" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_PORT_ID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="PORT_ID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="dane" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_OUT_PORT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="OUT_PORT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="wlacznik_otworow" SIGIS="undef" SIGNAME="dekoder_0_wlacznik_otworow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="otwory_0" PORT="wlacznik"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="doplyw" SIGIS="undef" SIGNAME="dekoder_0_doplyw">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="doplyw_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="kontrolka" RIGHT="0" SIGIS="undef" SIGNAME="dekoder_0_kontrolka">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="kontrolka_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="ilosc_otworow" RIGHT="0" SIGIS="undef" SIGNAME="dekoder_0_ilosc_otworow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="otwory_0" PORT="ilosc"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/multiplexer_0" HWVERSION="1.0" INSTANCE="multiplexer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="multiplexer" VLNV="xilinx.com:user:multiplexer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_multiplexer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="1" NAME="czujnik" RIGHT="0" SIGIS="undef" SIGNAME="czujniki_0_czujniki">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="czujniki_0" PORT="czujniki"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="tryby" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tryby_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="tryby_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ilosc_otworow" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_ilosc_otworow_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ilosc_otworow_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="porty" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_PORT_ID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="PORT_ID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="dane" RIGHT="0" SIGIS="undef" SIGNAME="multiplexer_0_dane">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="IN_PORT"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/otwory_0" HWVERSION="1.0" INSTANCE="otwory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="otwory" VLNV="xilinx.com:user:otwory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_otwory_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wlacznik" SIGIS="undef" SIGNAME="dekoder_0_wlacznik_otworow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dekoder_0" PORT="wlacznik_otworow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="ilosc" RIGHT="0" SIGIS="undef" SIGNAME="dekoder_0_ilosc_otworow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dekoder_0" PORT="ilosc_otworow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="otwor1" SIGIS="undef" SIGNAME="otwory_0_otwor1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="otwor1_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="otwor2" SIGIS="undef" SIGNAME="otwory_0_otwor2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="otwor2_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="otwor3" SIGIS="undef" SIGNAME="otwory_0_otwor3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="otwor3_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/pamiec_pro_0" HWVERSION="1.0" INSTANCE="pamiec_pro_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pamiec_pro" VLNV="xilinx.com:user:pamiec_pro:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="tama_z_pamiec_pro_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="9" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="PBlazeZH_0_ADDRESS">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="ADDRESS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="17" NAME="instruction" RIGHT="0" SIGIS="undef" SIGNAME="pamiec_pro_0_instruction">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PBlazeZH_0" PORT="INSTRUCTION"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

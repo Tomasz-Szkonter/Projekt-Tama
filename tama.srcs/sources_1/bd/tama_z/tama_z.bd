@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x39F446FA51E23AD5" bd:device="xc7z020clg400-3" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4" bd:top="tama_z" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>tama_z</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="tama_z_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>pelny_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>polowa_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>stan_krytyczny_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>tryby_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>1</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>ilosc_otworow_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>1</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>doplyw_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>kontrolka_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>otwor1_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>otwor2_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>otwor3_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>reset</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>tama_z_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>czujniki_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="czujniki" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_czujniki_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>PBlazeZH_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="PBlazeZH" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_PBlazeZH_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>multiplexer_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="multiplexer" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_multiplexer_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>dekoder_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="dekoder" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_dekoder_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>pamiec_pro_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="pamiec_pro" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_pamiec_pro_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>otwory_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="user" spirit:name="otwory" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">tama_z_otwory_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>czujniki_0_czujniki</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="czujniki_0" spirit:portRef="czujniki"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="czujnik"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>multiplexer_0_dane</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="dane"/>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="IN_PORT"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pamiec_pro_0_instruction</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="pamiec_pro_0" spirit:portRef="instruction"/>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="INSTRUCTION"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="pamiec_pro_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="CLK"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="RESET"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="czujniki_0" spirit:portRef="reset"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PBlazeZH_0_ADDRESS</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="ADDRESS"/>
+        <spirit:internalPortReference spirit:componentRef="pamiec_pro_0" spirit:portRef="address"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PBlazeZH_0_OUT_PORT</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="OUT_PORT"/>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="dane"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PBlazeZH_0_WRITE_STROBE</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="WRITE_STROBE"/>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="write_strobe"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PBlazeZH_0_PORT_ID</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PBlazeZH_0" spirit:portRef="PORT_ID"/>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="porty"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="porty"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dekoder_0_wlacznik_otworow</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="wlacznik_otworow"/>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="wlacznik"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dekoder_0_ilosc_otworow</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="ilosc_otworow"/>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="ilosc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>pelny_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="pelny_0"/>
+        <spirit:internalPortReference spirit:componentRef="czujniki_0" spirit:portRef="pelny"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>polowa_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="polowa_0"/>
+        <spirit:internalPortReference spirit:componentRef="czujniki_0" spirit:portRef="polowa"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>stan_krytyczny_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="stan_krytyczny_0"/>
+        <spirit:internalPortReference spirit:componentRef="czujniki_0" spirit:portRef="stan_krytyczny"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>tryby_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="tryby_0"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="tryby"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ilosc_otworow_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ilosc_otworow_0"/>
+        <spirit:internalPortReference spirit:componentRef="multiplexer_0" spirit:portRef="ilosc_otworow"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dekoder_0_doplyw</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="doplyw"/>
+        <spirit:externalPortReference spirit:portRef="doplyw_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>dekoder_0_kontrolka</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="dekoder_0" spirit:portRef="kontrolka"/>
+        <spirit:externalPortReference spirit:portRef="kontrolka_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>otwory_0_otwor1</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="otwor1"/>
+        <spirit:externalPortReference spirit:portRef="otwor1_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>otwory_0_otwor2</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="otwor2"/>
+        <spirit:externalPortReference spirit:portRef="otwor2_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>otwory_0_otwor3</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="otwory_0" spirit:portRef="otwor3"/>
+        <spirit:externalPortReference spirit:portRef="otwor3_0"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

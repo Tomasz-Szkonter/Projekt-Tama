@@ -1,0 +1,47 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port pelny_0 -pg 1 -y 50 -defaultsOSRD
+preplace port otwor2_0 -pg 1 -y 120 -defaultsOSRD
+preplace port stan_krytyczny_0 -pg 1 -y 130 -defaultsOSRD
+preplace port otwor1_0 -pg 1 -y 100 -defaultsOSRD
+preplace port otwor3_0 -pg 1 -y 140 -defaultsOSRD
+preplace port doplyw_0 -pg 1 -y 70 -defaultsOSRD
+preplace port clk -pg 1 -y 220 -defaultsOSRD
+preplace port reset -pg 1 -y 170 -defaultsOSRD
+preplace port polowa_0 -pg 1 -y 70 -defaultsOSRD
+preplace portBus ilosc_otworow_0 -pg 1 -y 110 -defaultsOSRD
+preplace portBus kontrolka_0 -pg 1 -y 30 -defaultsOSRD
+preplace portBus tryby_0 -pg 1 -y 90 -defaultsOSRD
+preplace inst PBlazeZH_0 -pg 1 -lvl 3 -y 50 -defaultsOSRD
+preplace inst dekoder_0 -pg 1 -lvl 4 -y 80 -defaultsOSRD
+preplace inst czujniki_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace inst pamiec_pro_0 -pg 1 -lvl 3 -y 200 -defaultsOSRD
+preplace inst multiplexer_0 -pg 1 -lvl 2 -y 80 -defaultsOSRD
+preplace inst otwory_0 -pg 1 -lvl 5 -y 120 -defaultsOSRD
+preplace netloc polowa_0_1 1 0 1 N
+preplace netloc dekoder_0_wlacznik_otworow 1 4 1 990
+preplace netloc multiplexer_0_dane 1 2 1 310
+preplace netloc otwory_0_otwor1 1 5 1 N
+preplace netloc tryby_0_1 1 0 2 -290J -30 0J
+preplace netloc PBlazeZH_0_WRITE_STROBE 1 3 1 690
+preplace netloc otwory_0_otwor2 1 5 1 N
+preplace netloc stan_krytyczny_0_1 1 0 1 -250
+preplace netloc PBlazeZH_0_ADDRESS 1 2 2 330 -60 670
+preplace netloc otwory_0_otwor3 1 5 1 N
+preplace netloc dekoder_0_ilosc_otworow 1 4 1 980
+preplace netloc dekoder_0_kontrolka 1 4 2 1000J 30 NJ
+preplace netloc pamiec_pro_0_instruction 1 2 2 340 -50 660
+preplace netloc dekoder_0_doplyw 1 4 2 1010J 50 1200J
+preplace netloc PBlazeZH_0_PORT_ID 1 1 3 40 -90 N -90 700
+preplace netloc PBlazeZH_0_OUT_PORT 1 3 1 680
+preplace netloc Net1 1 0 5 -270 -40 30 -40 320 -70 710 -10 1020
+preplace netloc Net 1 0 4 -260 -20 20 -20 300 -80 720
+preplace netloc czujniki_0_czujniki 1 1 1 10
+preplace netloc ilosc_otworow_0_1 1 0 2 -280J 0 -10J
+preplace netloc pelny_0_1 1 0 1 N
+levelinfo -pg 1 -310 -130 170 500 850 1110 1230 -top -230 -bot 500
+",
+}
+
