@@ -1,13 +1,15 @@
 # Projekt-Tama
 Projekt stworzony na potrzeby zaliczenia przedmiotu Architektura Komputerów
 
+STANY:
+
 stan 0 Wolny przepływ
 
 stan 1 Kontrolowany przepływ
 
 stan 2 Opróżnianie
 
-
+DIODY:
 
 dioda 00 wylaczony
 
